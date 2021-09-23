@@ -1,0 +1,70 @@
+.clients-title {
+    display: block;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1,66;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+
+    color: #212121;
+}
+.logo {
+    display: flex;
+}
+.logo-icon {
+    width: 106px;
+    height: 60px;
+    fill: #AFB1B8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    .logo__item:hover &,
+    .logo__item:focus &,
+    .logo__link:hover &,
+    .logo__link:focus & {
+    fill: #2196F3;
+    }
+}
+
+.logo__link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+    border: 1px solid var(--accent-color);
+    }
+}
+
+.logo__item {
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    cursor: pointer;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+    border: 1px solid var(--accent-color);
+    }
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+} 
