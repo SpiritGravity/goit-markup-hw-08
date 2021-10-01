@@ -1,12 +1,15 @@
 .header-pf {
     border-bottom: 1px solid #ECECEC;
-    height: 80px;
+    height: 60px;
     left: 0px;
     top: 0px;
     display: flex;
+    
 }
+
 .list-pf-button {
-    padding: 0;
+    padding-top: 60px;
+    padding-left: 15px;
 }
 .button {
     background-color: #F5F4FA;
@@ -23,9 +26,18 @@
         color: #FFFFFF;
     }
 }
-.list-pf-button {
+.main-nav-pf {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+}
+.list-pf-button {
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    display: flex;
+    align-items: right;
+    flex-wrap: wrap;
     margin-bottom: 50px;
 }
 .button-pf {
@@ -54,6 +66,9 @@
     } 
 }
 .pf-btn-list {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
     &:not(:last-child) {
     margin-right: 8px;
     }

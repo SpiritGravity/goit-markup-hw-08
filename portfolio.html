@@ -10,7 +10,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">    
         <link rel="stylesheet" href="./css/styles.css">
-        <link rel="stylesheet" href="./css/main.min.css">
+        <link rel="stylesheet" href="/sass/main.css">
         <title>Document</title>
     </head>
         <body>
@@ -20,7 +20,7 @@
                 <nav class="header-navigation"> 
                     <ul class="header-list list">
                         <li class="header-list__item">
-                            <a class="header-list__link current link" href="/index.html">Студия</a>
+                            <a class="header-list__link current link" href="./index.html">Студия</a>
                         </li>
                         <li class="header-list__item">
                             <a class="header-list__link  link" href="./portfolio.html"  rel="noreferrer noopener">Портфолио</a>
@@ -46,9 +46,57 @@
                             <use href="./images/sprite.svg#icon-smartphone"/>
                         </svg>
                         +38 096 111 11 11
-                    </a></li>
+                    </a>
+                </li>
                 </ul>
                 </div>
+            <!-- <button type="button" 
+                    class="button-menu is-open" >
+                    <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                    <use class="icon-close-mob" href="./images/sprite.svg#icon-close_mob"></use>
+                    <use class="icon-menu-mob" href="./images/sprite.svg#icon-menu_mob"></use>
+                    </svg>
+            </button> -->
+            <button class="button-menu" data-menu-open>
+                <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                    <use class="icon-menu-mob" href="./images/sprite.svg#icon-menu_mob"></use>
+                </svg>
+            </button>
+        <div class="mob-menu is-hidden" data-menu>
+            <button type="button" class="menu-close" data-menu-close>
+                <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                    <use class="icon-close-mob" href="./images/sprite.svg#icon-close_mob"></use>
+                </svg>
+            </button>
+            <ul class="mob-menu-list list">
+                <li class="mob-menu-list__item">
+                    <a class="mob-menu-list__link link" href="./index.html">Студия</a>
+                </li>
+                <li class="mob-menu-list__item">
+                    <a class="mob-menu-list__link link" href="./portfolio.html">Портфолио</a>
+                </li>
+                <li class="mob-menu-list__item">
+                    <a class="mob-menu-list__link link" href="">Контакты</a>
+                </li>
+                <div class="mob-menu-box">
+                <a class="mob-menu__tel link" href="tel:+380441111111">+38 096 111 11 11</a>
+                <a class="mob-menu__mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                <ul class="mob-menu__social list">
+                    <li class="mob-menu__social-item">
+                        <a href="Instagram" class="mob-menu__social-link link">Instagram</a>
+                    </li>
+                    <li class="mob-menu__social-item">
+                        <a href="Twitter" class="mob-menu__social-link link">Twitter</a>
+                    </li>
+                    <li class="mob-menu__social-item">
+                        <a href="Facebook" class="mob-menu__social-link link">Facebook</a>
+                    </li>
+                    <li class="mob-menu__social-item">
+                        <a href="LinkedIn" class="mob-menu__social-link link">LinkedIn</a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
             </div>
             </header>
         <main>
@@ -67,7 +115,31 @@
                     <li class="item-pf">
                         <a class="item-pf-link link" href="">
                             <div class="item-pf-overtext">
-                        <img src="./images/tekhno.jpg" alt="Технокряк" width="370" height="294"/>
+                                <picture>
+                                    <source
+                                      media="(min-width: 1200px)"
+                                      srcset="
+                                        ./images/portf1_technokryak@1x.jpg 1x,
+                                        ./images/portf1_technokryak@2x.jpg 2x
+                                      "
+                                    />
+                                    <source
+                                      media="(min-width: 768px)"
+                                      srcset="
+                                        ./images/tab/pf/tech-tab-1x.jpg 1x,
+                                        ./images/tab/pf/tech-tab-2x.jpg 2x
+                                      "
+                                    />
+                                    <source
+                                      media="(min-width: 480px)"
+                                      srcset="
+                                      ./images/mobile/pf/tech-mob-1x.jpg 1x,
+                                      ./images/mobile/pf/tech-mob-2x.jpg 2x
+                                      "
+                                    />
+                                    <img src="./images/tekhno.jpg" alt="Технокряк" width="370" height="294"/>
+                                    />
+                                  </picture>
                         <p class="item-pf-text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
                             </div>
                         <div class="pf-dscr">
@@ -175,7 +247,7 @@
             </div>
             </section>
         </main>  
-        <footer class="footer ">
+        <!-- <footer class="footer ">
             <div class="container footer-content">
             <div class="footer-left">
             <a class="footer-logo " href="index.html"> <span class="accent-logo">Web</span>Studio</a>
@@ -236,7 +308,7 @@
                 </form>
             </div>
         </div>
-        </footer>  
+        </footer>   -->
  
 
         </body>
