@@ -2,9 +2,14 @@
 .contact__mail,
 .contact__tel,
 .header__link {
-    @media screen and (max-width: 480px) { 
-        display: none;
-    }
+    display: none;
+//     @media screen and (max-width: 480px) { 
+//         display: none;
+//     transition-property: color;
+//     transition-duration: 250ms;
+//     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+// }
+    
     @media screen and (min-width: 768px) { 
     transition-property: color;
     transition-duration: 250ms;
@@ -18,7 +23,7 @@
     }
     @media screen and (min-width: 768px) { 
     position: relative;
-
+display: flex;
     &:not(:last-child) {
         margin-right: 50px;
     }
@@ -56,6 +61,17 @@ color: var(--accent-color);
     margin-top: 16px;
     // margin-right: 93px;
     // margin-left: auto;
+    @media screen and (min-width: 768px) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin-right: 88px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+  }
 }
 .accent-logo {
     color: var(--accent-color); 
