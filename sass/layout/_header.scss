@@ -2,7 +2,7 @@
 .contact__mail,
 .contact__tel,
 .header__link {
-    display: none;
+    // display: none;
     @media screen and (max-width: 480px) { 
         display: none;
     transition-property: color;
@@ -37,14 +37,11 @@
 color: var(--accent-color);
 }
 .header-list {
-    display: flex;
+    // display: flex;
     @media screen and (max-width: 480px) { 
         display: none;}
 
     
-}
-.header-navigation {
-    display: flex;
 }
 .header-logo {
     font-family: Raleway;
@@ -330,7 +327,8 @@ margin-bottom: 64px;
     margin-right: 20px;
 }
 .mob-menu-box {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     margin-bottom: 48px;
+    margin-top: auto;
 }

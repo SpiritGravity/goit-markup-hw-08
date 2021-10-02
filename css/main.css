@@ -311,7 +311,6 @@ img {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  height: 92px;
   margin-left: 30px;
   margin-top: 30px;
   flex-basis: calc((100% - 60px) / 2);
@@ -385,12 +384,6 @@ img {
   margin-right: 30px;
 }
 
-.contact__mail,
-.contact__tel,
-.header__link {
-  display: none;
-}
-
 @media screen and (max-width: 480px) {
   .contact__mail,
   .contact__tel,
@@ -436,18 +429,10 @@ img {
   color: var(--accent-color);
 }
 
-.header-list {
-  display: flex;
-}
-
 @media screen and (max-width: 480px) {
   .header-list {
     display: none;
   }
-}
-
-.header-navigation {
-  display: flex;
 }
 
 .header-logo {
@@ -718,9 +703,10 @@ img {
 }
 
 .mob-menu-box {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   margin-bottom: 48px;
+  margin-top: auto;
 }
 
 .hero {
@@ -729,6 +715,17 @@ img {
   height: 400px;
   margin: 0 auto;
   text-align: center;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg-img.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+    height: 400px;
+  }
 }
 
 .hero__text {
@@ -1380,13 +1377,16 @@ input, textarea {
   margin: 30px 15px 30px 15px;
 }
 
-.features-list__icon {
-  fill: #AFB1B8;
+@media screen and (min-width: 768px) {
+  .features-list__content {
+    width: 354px;
+    height: 120px;
+    display: flex;
+  }
 }
 
-.features .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+.features-list__icon {
+  fill: #AFB1B8;
 }
 
 @media screen and (min-width: 768px) {
@@ -1405,7 +1405,6 @@ input, textarea {
 }
 
 .features-pre-list {
-  display: flex;
   padding: 0;
   margin-top: 30px;
 }
