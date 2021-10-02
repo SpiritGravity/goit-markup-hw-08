@@ -958,6 +958,7 @@ img {
 }
 
 .footer {
+  margin-top: 30px;
   color: #FFFFFF;
   background-color: #2F303A;
   padding-top: 60px;
@@ -1397,7 +1398,7 @@ input, textarea {
 }
 
 .features-list {
-  width: 270px;
+  width: 100%;
 }
 
 .features-list:not(:last-child) {
@@ -1510,6 +1511,12 @@ input, textarea {
   display: flex;
   list-style: none;
   margin-top: 50px;
+}
+
+@media screen and (max-width: 1200px) {
+  .what-we-do {
+    display: none;
+  }
 }
 
 .what-we-do__item {
