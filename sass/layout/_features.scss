@@ -25,11 +25,28 @@
         padding-bottom: 60px;}
 }
 .features-list {
+    @media screen and (min-width: 1200px) {
     width: 100%;
         &:not(:last-child) {
         margin-right: 30px;
         }
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-basis: calc((100% - 30px) / 2);
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 90px) / 4);
+    margin-right: 30px;
+    margin-bottom: 0;
+    &:last-child {
+      margin-right: 0;
+    }}
 .features-pre-list {
     // display: flex;
     // flex-direction: column;
@@ -52,7 +69,6 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-
     text-align: center;
     color: #212121;
     margin-bottom: 10px;
@@ -60,6 +76,7 @@
         text-align: start;
         margin-left: 0;
         padding-right: 0;
+        padding-left: 15px;
         }
 }
 .features-list__description {
@@ -92,3 +109,61 @@
     flex-basis: calc((100% - (3 * 30px)) / 4); 
 }
 }
+
+
+// .features-pre-list {
+//     display: block;
+//     @media screen and (max-width: 767px) {
+//       margin-bottom: -60px;
+//     }
+//     @media screen and (min-width: 768px) {
+//       width: 100%;
+//       display: flex;
+//       flex-wrap: wrap;
+// }
+// .features-list {
+//     margin-bottom: 30px;
+//     &:last-child {
+//       margin-bottom: 0;
+//     }
+//     @media screen and (min-width: 768px) and (max-width: 1199px) {
+//       flex-basis: calc((100% - 30px) / 2);
+//       &:nth-child(odd) {
+//         margin-right: 30px;
+//       }
+//       &:nth-last-child(-n + 2) {
+//         margin-bottom: 0;
+//       }
+//     }
+//     @media screen and (min-width: 1200px) {
+//       flex-basis: calc((100% - 90px) / 4);
+//       margin-right: 30px;
+//       margin-bottom: 0;
+//       &:last-child {
+//         margin-right: 0;
+//       }
+//     }
+// }
+// .features-list__content {
+//     display: block;  
+//     width: auto;
+//     height: 120px;
+//     margin-bottom: 30px;
+//     padding-top: 25px;
+//     padding-bottom: 25px;
+//   }
+//   .features-pre-list__item { 
+//         font-weight: bold;
+//         font-size: 14px;
+//         line-height: 1.14;
+//         letter-spacing: 0.03em;
+//         text-transform: uppercase;
+//         text-align: center;
+//         color: #212121;
+//     text-transform: uppercase;
+//     color: var(--title-text-color);
+//     text-align: center;
+  
+//     @media screen and (min-width: 768px) {
+//       text-align: start;
+//     }}
