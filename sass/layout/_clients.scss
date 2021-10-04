@@ -2,6 +2,10 @@
 .clients {
   padding-top: 60px;
   padding-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .clients-title {
   display: block;

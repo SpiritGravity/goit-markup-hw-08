@@ -2,7 +2,12 @@
     background-color: #F5F4FA;
     padding-top: 60px;
     padding-bottom: 60px;
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
+
 .team-list {
     // flex-wrap: nowrap;
     list-style: none;
@@ -19,6 +24,8 @@
     @media screen and (min-width: 1200px) {
         margin-left: 0px;
         margin-top: 0px;
+        flex-wrap: nowrap;
+        margin-left: -30px;
     }
 
 }
@@ -33,6 +40,10 @@
     background-color: #F5F4FA;
     margin: 0 15px 0 15px;
 
+    @media screen and (min-width: 1200px) {
+        font-size: 36px;    }
+        line-height: calc(42 / 36);
+        margin-bottom: 35px;
 }
 .card-box {
     margin: 0;

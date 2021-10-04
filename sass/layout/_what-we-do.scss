@@ -1,5 +1,9 @@
 .what-we-do  {
-    padding-bottom: 94px;
+    // padding-bottom: 94px;
+    // display: none;
+    // @media screen and (min-width: 480px) {
+    //     display: none;
+    // }
 }
 .what-we-do__title {
     display: center;
@@ -25,8 +29,8 @@
     margin-top: 50px;
 
 }
-@media screen and (max-width: 1200px) {
-    .what-we-do {
+.what-we-do .container {
+@media screen and (max-width: 1199px) {
       display: none;
     }
   }
