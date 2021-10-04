@@ -4,12 +4,28 @@
     left: 0px;
     top: 0px;
     display: flex;
+    @media screen and (min-width: 768px) {
+        height: 80px;
+
+    }
     
 }
 
 .list-pf-button {
     padding-top: 60px;
     padding-left: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-bottom: 40px;
+    @media screen and (min-width: 768px) {
+      flex-wrap: nowrap;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+    }
 }
 .button {
     background-color: #F5F4FA;
@@ -80,35 +96,49 @@
     align-items: center;
     margin-right: -30px;
     margin-top: -30px; 
-    padding: 0; 
-    margin-bottom: 60px;
-
+    padding: 0 0 60px 0;  
+    // margin-bottom: 60px;
 }
+//     @media screen and (min-width: 768px) {
+//         margin-left: -15px;
+//     }
+// }
 .item-pf {
-    margin-right: 30px;
-    margin-top: 30px; 
-    flex-basis: calc((100% - 90px) / 3);
     border: 1px solid #EEEEEE;
 
     transition-property: border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    @media screen and (min-width: 768px) {
+    &:nth-child(odd) {
+        margin-right: 30px;}
+    // margin-left: 15px;
+    // flex-basis: calc((100% - 90px) / 3);
+    // box-sizing: border-box;
+    }
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc((100% - 90px) / 3);
+        margin-right: 30px;
+        margin-top: 30px; 
 
-    &:nth-child(3n) {
-    margin-right: 0;
-    }
-    &:focus,
-    &:hover {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-    border-left: 1px solid rgba(0, 0, 0, 0.12);
-    border-right: 1px solid rgba(0, 0, 0, 0.12);
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    }
-    margin-left: 15px;
-    flex-basis: calc((100% - 90px) / 3);
-    box-sizing: border-box;
+        &:nth-child(3n) {
+            margin-right: 0;
+            }
+        &:focus,
+        &:hover {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        border-left: 1px solid rgba(0, 0, 0, 0.12);
+        border-right: 1px solid rgba(0, 0, 0, 0.12);
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+        } }
+        &:last-child {
+            margin-top: 0;
+        }
+    
 }
-
 .item-pf-link {
     display: block;
     text-decoration: none;
@@ -159,5 +189,5 @@
     line-height: 1.87;
     letter-spacing: 0.03em;
     color: #757575;
-    }
+}
 

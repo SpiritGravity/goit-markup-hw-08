@@ -107,9 +107,33 @@ img {
   display: flex;
 }
 
+@media screen and (min-width: 768px) {
+  .header-pf {
+    height: 80px;
+  }
+}
+
 .list-pf-button {
   padding-top: 60px;
   padding-left: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .list-pf-button {
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .list-pf-button {
+    margin-bottom: 50px;
+  }
 }
 
 .button {
@@ -182,32 +206,45 @@ img {
   align-items: center;
   margin-right: -30px;
   margin-top: -30px;
-  padding: 0;
-  margin-bottom: 60px;
+  padding: 0 0 60px 0;
 }
 
 .item-pf {
-  margin-right: 30px;
-  margin-top: 30px;
-  flex-basis: calc((100% - 90px) / 3);
   border: 1px solid #EEEEEE;
   transition-property: border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  margin-left: 15px;
-  flex-basis: calc((100% - 90px) / 3);
-  box-sizing: border-box;
 }
 
-.item-pf:nth-child(3n) {
-  margin-right: 0;
+.item-pf:not(:last-child) {
+  margin-bottom: 30px;
 }
 
-.item-pf:focus, .item-pf:hover {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-  border-left: 1px solid rgba(0, 0, 0, 0.12);
-  border-right: 1px solid rgba(0, 0, 0, 0.12);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+@media screen and (min-width: 768px) {
+  .item-pf:nth-child(odd) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .item-pf {
+    flex-basis: calc((100% - 90px) / 3);
+    margin-right: 30px;
+    margin-top: 30px;
+  }
+  .item-pf:nth-child(3n) {
+    margin-right: 0;
+  }
+  .item-pf:focus, .item-pf:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    border-left: 1px solid rgba(0, 0, 0, 0.12);
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.item-pf:last-child {
+  margin-top: 0;
 }
 
 .item-pf-link {
@@ -1164,7 +1201,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .footer {
-    width: 1200px;
+    min-width: 1200px;
     padding-top: 72px;
     padding-bottom: 0px;
     text-align: left;
@@ -1631,6 +1668,12 @@ input, textarea {
 @media screen and (min-width: 768px) {
   .features-pre-list {
     margin-left: -15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features-pre-list {
+    margin-left: -60px;
   }
 }
 
