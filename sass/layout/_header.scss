@@ -37,7 +37,7 @@
 color: var(--accent-color);
 }
 .header-list {
-    // display: flex;
+    display: flex;
     @media screen and (max-width: 480px) { 
         display: none;}
     @media screen and (max-width: 768px) { 
@@ -158,13 +158,14 @@ color: var(--accent-color);
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact {
-    display: flex;
+display: none;    
+    @media screen and (min-width: 768px) { 
+        display: flex;
     // margin-left: auto;
     align-items: center;
     align-items: flex-start;
     flex-direction: column;
-    @media screen and (min-width: 768px) { 
-    align-items: flex-end;}
+align-items: flex-end;}
 }
 .contact__mail {
     @media screen and (min-width: 768px) { 
