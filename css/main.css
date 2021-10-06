@@ -246,6 +246,10 @@ img {
   }
 }
 
+.item-pf:not(:last-child) {
+  margin-bottom: 0px;
+}
+
 .item-pf-link {
   display: block;
   text-decoration: none;
