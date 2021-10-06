@@ -96,7 +96,7 @@
     flex-wrap: wrap;
     align-items: center;
     margin-right: -30px;
-    margin-top: -30px; 
+    // margin-top: -30px; 
     padding: 0 0 60px 0;  
     // margin-bottom: 60px;
 }
@@ -116,9 +116,16 @@
     @media screen and (min-width: 768px) {
     &:nth-child(odd) {
         margin-right: 30px;}
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }    
     // margin-left: 15px;
     // flex-basis: calc((100% - 90px) / 3);
     // box-sizing: border-box;
+        //     &:last-child {
+        //     margin-top: 30px;
+        // // }
+
     }
     @media screen and (min-width: 1200px) {
         flex-basis: calc((100% - 90px) / 3);

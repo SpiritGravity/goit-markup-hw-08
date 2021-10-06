@@ -206,7 +206,6 @@ img {
   flex-wrap: wrap;
   align-items: center;
   margin-right: -30px;
-  margin-top: -30px;
   padding: 0 0 60px 0;
 }
 
@@ -224,6 +223,9 @@ img {
 @media screen and (min-width: 768px) {
   .item-pf:nth-child(odd) {
     margin-right: 30px;
+  }
+  .item-pf:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 
@@ -401,7 +403,7 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .logo {
     width: 1200px;
   }
