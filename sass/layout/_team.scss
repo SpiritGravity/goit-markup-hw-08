@@ -36,14 +36,15 @@
     text-align: center;
     letter-spacing: 0.03em;
     color: #212121;
-    // padding-bottom: 30px;
+    padding-bottom: 30px;
     background-color: #F5F4FA;
     margin: 0 15px 0 15px;
 
     @media screen and (min-width: 1200px) {
-        font-size: 36px;    }
+        font-size: 36px;    
         line-height: calc(42 / 36);
         margin-bottom: 35px;
+    }
 }
 .card-box {
     margin: 0;
